@@ -10,7 +10,7 @@ load_dotenv()
 @tool
 def calculator(a:float, b:float) -> str:
     """Useful for performing basic arthimatic calculation with numbers"""
-    print("calculator tool has been called")
+    print("\ncalculator tool has been called")
     return f"The Sum of {a} and {b} is {a+b}"
 
 def main():
@@ -22,7 +22,7 @@ def main():
     )
     
 
-    tools = []
+    tools = [calculator]
     agent_executor = create_react_agent(model , tools)
     print("Welcome! I am your AI assistant. Type 'quit' to exit.")
     print("You can ask me to perform calculation or chat with me.")
